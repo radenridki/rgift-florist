@@ -3,118 +3,246 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rgift Florist - Handmade Gifts & Flowers</title>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<title>Rgift Florist - Buket & Kado Handmade</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff8f0;
+    color: #4a3a3a;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #fedea5, #fed77f);
+    padding: 50px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    margin: 0 auto 15px;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 8px;
+    color: #ad6332;
+    letter-spacing: 3px;
+  }
+  header p.subtitle {
+    margin: 6px 0 25px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #804b1a;
+  }
+  .info-list {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .info-list div {
+    margin: 9px 0;
+    user-select:none;
+  }
+  .btn-instagram {
+    background-color: #405de6;
+    padding: 14px 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px #2d3db5;
+    transition: all 0.3s ease;
+  }
+  .btn-instagram:hover {
+    background-color: #2d3db5;
+    box-shadow: 0 4px #1b286f;
+  }
+
+  /* Gallery section */
+  section.gallery {
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+  }
+  section.gallery h2 {
+    text-align: center;
+    color: #d9733a;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+  }
+  .gallery-grid img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 6px 6px 18px rgba(217,115,58,0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .gallery-grid img:hover {
+    transform: scale(1.06);
+  }
+
+  /* Testimonials */
+  section.testimonials {
+    background-color: #ffe6ca;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(217,115,58,0.25);
+  }
+  section.testimonials h2 {
+    text-align: center;
+    color: #ad6332;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .testimonial-item {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #6f4b28;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .testimonial-item span {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #c26311;
+  }
+
+  /* Order Now Button Section */
+  .order-section {
+    text-align: center;
+    background: #fed77f;
+    padding: 45px 20px 80px;
+    border-radius: 30px;
+    max-width: 600px;
+    margin: 0 auto 80px;
+    box-shadow: 0 8px 20px rgba(253,215,137,0.5);
+  }
+  .order-section p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7f4411;
+    margin-bottom: 30px;
+    user-select:none;
+  }
+  .btn-wa-order {
+    background: #25d366;
+    font-size: 1.4rem;
+    padding: 20px 55px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 7px #1da851;
+    transition: background 0.3s ease;
+    display: inline-block;
+    user-select:none;
+  }
+  .btn-wa-order:hover {
+    background: #1da851;
+  }
+
+  /* Footer */
+  footer {
+    background: #ad6332;
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff5e6;
+    letter-spacing: 1.3px;
+    user-select:none;
+  }
+  @media (max-width: 600px){
+    header h1 {
+      font-size: 2.1rem;
+    }
+    section.gallery h2 {
+      font-size: 1.9rem;
+    }
+    section.testimonials h2 {
+      font-size: 1.7rem;
+    }
+    .testimonial-item {
+      font-size: 1.1rem;
+    }
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <img src="https://instagram.fcgk5-1.fna.fbcdn.net/v/t51.2885-19/305088686_459756223276867_5451863955956229985_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fcgk5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=hoRrdhXVUAcAX8JXFuQ&edm=APU89FABAAAA&ccb=7-5&oh=00_AfB3XQIjGig-2StGfzw4JHXwVUwqx-g5qMIxLRl39zE2uw&oe=647D4666&_nc_sid=86f79a" alt="Rgift Florist Profile" class="profile-pic" />
-  <h1>rgift_florist 🌻</h1>
-  <p><strong>Gift Shop</strong></p>
-  <p>🏡 Bogor</p>
-  <p>Respon cepat !!! 👇</p>
-  <p>📌 Made by request, on proces 2-3 day's</p>
-  <p>🎁 Pusat kado Handmade</p>
-  <p>🚚 JNE</p>
-  <a href="https://instagram.com/rgift_florist" target="_blank" class="btn-follow">Follow Instagram</a>
+  <img src="https://instagram.fcgk5-1.fna.fbcdn.net/v/t51.2885-19/305088686_459756223276867_5451863955956229985_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fcgk5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=hoRrdhXVUAcAX8JXFuQ&edm=APU89FABAAAA&ccb=7-5&oh=00_AfB3XQIjGig-2StGfzw4JHXwVUwqx-g5qMIxLRl39zE2uw&oe=647D4666&_nc_sid=86f79a" alt="Profil rgift_florist" class="profile-pic" />
+  <h1>rgift_florist 🌼</h1>
+  <p class="subtitle">Gift Shop handmade di Bogor - Respon cepat! 👇</p>
+  <div class="info-list">
+    <div>📌 Made by request, on proces 2-3 day's</div>
+    <div>🎁 Pusat kado Handmade</div>
+    <div>🚚 Pengiriman via JNE ke seluruh Indonesia</div>
+  </div>
+  <a href="https://instagram.com/rgift_florist" target="_blank" rel="noopener noreferrer" class="btn-instagram" aria-label="Follow Instagram">Follow Instagram</a>
 </header>
-<section class="highlights">
-  <h2>Highlights Stories</h2>
-  <div class="highlights-container">
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/r3lrGma.png" alt="Sneck tower" />
-      <p>Snack tower</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/B4INZ2j.jpg" alt="Balon pvc" />
-      <p>Balon pvc</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/vqfNrQ3.jpg" alt="Testimoni" />
-      <p>Testimoni</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/c8sTz3O.jpg" alt="Balon dekorasi" />
-      <p>Balon dekorasi</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/Uc9NFLz.jpg" alt="Spesial custom" />
-      <p>Spesial custom</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/qfRATOr.jpg" alt="Box impression" />
-      <p>Box impression</p>
-    </div>
-    <div class="highlight-item">
-      <img src="https://i.imgur.com/gAjGo4l.jpg" alt="Gift bin" />
-      <p>Gift bin</p>
-    </div>
+
+<section class="gallery" aria-label="Galeri produk">
+  <h2>Galeri Produk yang Memikat Hati</h2>
+  <div class="gallery-grid" role="list">
+    <img src="https://i.imgur.com/nEAX1PJ.jpg" alt="Buket bunga handmade warna peach cantik dengan pita" role="listitem" />
+    <img src="https://i.imgur.com/h7EdRhc.jpg" alt="Buket bunga warna cerah dengan wrapping kertas putih" role="listitem" />
+    <img src="https://i.imgur.com/1vNLEwN.jpg" alt="Buket bunga pink dan hijau dengan detail pita cantik" role="listitem" />
+    <img src="https://i.imgur.com/8g7JunE.jpg" alt="Kotak hadiah handmade dengan bunga dan dekorasi unik" role="listitem" />
+    <img src="https://i.imgur.com/G8kTxk6.jpg" alt="Buket bunga merah muda besar dan mewah" role="listitem" />
+    <img src="https://i.imgur.com/wP65m1K.jpg" alt="Tumpukan kado handmade cantik siap kirim" role="listitem" />
   </div>
 </section>
 
-<section class="gallery">
-  <h2>Galeri Produk Pilihan</h2>
-  <div class="gallery-grid">
-    <img src="https://i.imgur.com/nEAX1PJ.jpg" alt="Bunga Handmade 1" />
-    <img src="https://i.imgur.com/h7EdRhc.jpg" alt="Bunga Handmade 2" />
-    <img src="https://i.imgur.com/1vNLEwN.jpg" alt="Bunga Handmade 3" />
-  </div>
-</section>
-<section class="testimonials">
-  <h2>Testimoni Pelanggan</h2>
+<section class="testimonials" aria-label="Testimoni pelanggan">
+  <h2>Apa Kata Mereka?</h2>
   <div class="testimonial-item">
-    <p>🌟🌟🌟🌟🌟<br />“Pelayanan cepat dan bunganya cantik banget! Terima kasih Rgift Florist!”</p>
+    “Pelayanan cepat dan bunganya cantik banget! Terima kasih Rgift Florist!”<br />
     <span>- Sari, Bogor</span>
   </div>
   <div class="testimonial-item">
-    <p>🌟🌟🌟🌟🌟<br />"Kado handmade-nya unik, pas banget untuk ulang tahun adik saya."</p>
+    "Kado handmade-nya unik dan personal banget, pas untuk ulang tahun orang tersayang."<br />
     <span>- Budi, Jakarta</span>
   </div>
   <div class="testimonial-item">
-    <p>🌟🌟🌟🌟🌟<br />“Pengiriman tepat waktu dan bunganya fresh. Recommended!”</p>
+    “Pengiriman selalu tepat waktu, dan buket bunga selalu fresh. Highly recommended!”<br />
     <span>- Lina, Depok</span>
   </div>
 </section>
 
-<section class="order-form">
-  <h2>Pesan Sekarang!</h2>
-  <form id="orderForm">
-    <label for="name">Nama Lengkap</label>
-    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required />
-    
-    <label for="phone">No. WhatsApp</label>
-    <input type="tel" id="phone" name="phone" placeholder="0812xxxxxx" required pattern="[0-9]{10,15}" />
-    
-    <label for="product">Pilihan Produk</label>
-    <select id="product" name="product" required>
-      <option value="" disabled selected>Pilih produk</option>
-      <option value="Bunga Handmade">Bunga Handmade</option>
-      <option value="Gift Box">Gift Box</option>
-      <option value="Balon Dekorasi">Balon Dekorasi</option>
-    </select>
-    
-    <label for="message">Pesan Khusus (optional)</label>
-    <textarea id="message" name="message" rows="3" placeholder="Tulis pesan khusus untuk kado kamu"></textarea>
-    
-    <button type="submit" class="btn-order">Kirim Pesanan 🎉</button>
-  </form>
+<section class="order-section" aria-label="Ajak pelanggan pesan sekarang via WhatsApp">
+  <p>Mau kado atau buket handmade spesial? Pesan langsung ke WhatsApp kami!</p>
+  <a href="https://wa.me/6281234567890?text=Halo%20rgift_florist,%20saya%20ingin%20pesan%20produk%20handmade%20Anda." class="btn-wa-order" target="_blank" rel="noopener noreferrer" aria-label="Pesan via WhatsApp">💬 Pesan Sekarang via WhatsApp</a>
 </section>
 
 <footer>
-  <p>&copy; 2023 Rgift Florist | Handmade with Love 💖</p>
+  &copy; 2018 Rgift Florist | Handmade with Love 💖
 </footer>
 
-<script>
-  document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert("Terima kasih sudah pesan! Kami akan segera menghubungi Anda via WhatsApp.");
-    this.reset();
-  });
-</script>
-
 </body>
-
 </html>
-
