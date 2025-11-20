@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rgift Florist - Handmade Gifts & Flowers</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <img src="https://instagram.fcgk5-1.fna.fbcdn.net/v/t51.2885-19/305088686_459756223276867_5451863955956229985_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fcgk5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=hoRrdhXVUAcAX8JXFuQ&edm=APU89FABAAAA&ccb=7-5&oh=00_AfB3XQIjGig-2StGfzw4JHXwVUwqx-g5qMIxLRl39zE2uw&oe=647D4666&_nc_sid=86f79a" alt="Rgift Florist Profile" class="profile-pic" />
+  <h1>rgift_florist 🌻</h1>
+  <p><strong>Gift Shop</strong></p>
+  <p>🏡 Bogor</p>
+  <p>Respon cepat !!! 👇</p>
+  <p>📌 Made by request, on proces 2-3 day's</p>
+  <p>🎁 Pusat kado Handmade</p>
+  <p>🚚 JNE</p>
+  <a href="https://instagram.com/rgift_florist" target="_blank" class="btn-follow">Follow Instagram</a>
+</header>
+<section class="highlights">
+  <h2>Highlights Stories</h2>
+  <div class="highlights-container">
+    <div class="highlight-item">
+      <img src="https://imgur.com/a/snack-tower-tJG81vt" alt="Sneck tower" />
+      <p>Sneck tower</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/B4INZ2j.jpg" alt="Balon pvc" />
+      <p>Balon pvc</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/vqfNrQ3.jpg" alt="Testimoni" />
+      <p>Testimoni</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/c8sTz3O.jpg" alt="Balon dekorasi" />
+      <p>Balon dekorasi</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/Uc9NFLz.jpg" alt="Spesial custom" />
+      <p>Spesial custom</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/qfRATOr.jpg" alt="Box impression" />
+      <p>Box impression</p>
+    </div>
+    <div class="highlight-item">
+      <img src="https://i.imgur.com/gAjGo4l.jpg" alt="Gift bin" />
+      <p>Gift bin</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Galeri Produk Pilihan</h2>
+  <div class="gallery-grid">
+    <img src="https://i.imgur.com/nEAX1PJ.jpg" alt="Bunga Handmade 1" />
+    <img src="https://i.imgur.com/h7EdRhc.jpg" alt="Bunga Handmade 2" />
+    <img src="https://i.imgur.com/1vNLEwN.jpg" alt="Bunga Handmade 3" />
+  </div>
+</section>
+<section class="testimonials">
+  <h2>Testimoni Pelanggan</h2>
+  <div class="testimonial-item">
+    <p>🌟🌟🌟🌟🌟<br />“Pelayanan cepat dan bunganya cantik banget! Terima kasih Rgift Florist!”</p>
+    <span>- Sari, Bogor</span>
+  </div>
+  <div class="testimonial-item">
+    <p>🌟🌟🌟🌟🌟<br />"Kado handmade-nya unik, pas banget untuk ulang tahun adik saya."</p>
+    <span>- Budi, Jakarta</span>
+  </div>
+  <div class="testimonial-item">
+    <p>🌟🌟🌟🌟🌟<br />“Pengiriman tepat waktu dan bunganya fresh. Recommended!”</p>
+    <span>- Lina, Depok</span>
+  </div>
+</section>
+
+<section class="order-form">
+  <h2>Pesan Sekarang!</h2>
+  <form id="orderForm">
+    <label for="name">Nama Lengkap</label>
+    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required />
+    
+    <label for="phone">No. WhatsApp</label>
+    <input type="tel" id="phone" name="phone" placeholder="0812xxxxxx" required pattern="[0-9]{10,15}" />
+    
+    <label for="product">Pilihan Produk</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Pilih produk</option>
+      <option value="Bunga Handmade">Bunga Handmade</option>
+      <option value="Gift Box">Gift Box</option>
+      <option value="Balon Dekorasi">Balon Dekorasi</option>
+    </select>
+    
+    <label for="message">Pesan Khusus (optional)</label>
+    <textarea id="message" name="message" rows="3" placeholder="Tulis pesan khusus untuk kado kamu"></textarea>
+    
+    <button type="submit" class="btn-order">Kirim Pesanan 🎉</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2023 Rgift Florist | Handmade with Love 💖</p>
+</footer>
+
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert("Terima kasih sudah pesan! Kami akan segera menghubungi Anda via WhatsApp.");
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
